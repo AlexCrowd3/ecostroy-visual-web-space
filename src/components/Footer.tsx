@@ -1,12 +1,13 @@
 
+import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   const quickLinks = [
-    { name: 'Главная', href: '#' },
-    { name: 'Услуги', href: '#services' },
-    { name: 'Проекты', href: '#projects' },
-    { name: 'О компании', href: '#about' }
+    { name: 'Главная', href: '/' },
+    { name: 'Услуги', href: '/services' },
+    { name: 'Проекты', href: '/projects' },
+    { name: 'О компании', href: '/about' }
   ];
 
   const services = [
@@ -22,11 +23,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <img 
-              src="/lovable-uploads/5be6295e-99ed-4db4-86cf-6175343e0498.png" 
-              alt="Экострой" 
-              className="h-8 w-auto mb-6 filter brightness-0 invert"
-            />
+            <Link to="/">
+              <img 
+                src="/lovable-uploads/5be6295e-99ed-4db4-86cf-6175343e0498.png" 
+                alt="Экострой" 
+                className="h-8 w-auto mb-6 filter brightness-0 invert"
+              />
+            </Link>
             <p className="text-gray-300 mb-6">
               Строим экологичное будущее с использованием инновационных технологий 
               и устойчивых материалов.
@@ -52,12 +55,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <a 
-                    href={link.href} 
+                  <Link 
+                    to={link.href} 
                     className="text-gray-300 hover:text-eco-green transition-colors"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
