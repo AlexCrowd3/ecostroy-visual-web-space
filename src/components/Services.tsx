@@ -63,31 +63,34 @@ const Services = () => {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {/* Main Service Cards */}
-          {mainServices.slice(0, 4).map((service, index) => (
-            <div
-              key={service.title}
-              className={`group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 ${
-                index === 0 || index === 3 ? 'md:col-span-1 lg:col-span-1' : ''
-              }`}
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="relative h-64">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className={`absolute inset-0 bg-gradient-to-t ${service.gradient} opacity-80`}></div>
-                
-                {/* Content Overlay */}
-                <div className="absolute inset-0 p-6 flex flex-col justify-end text-white">
-                  <service.icon className="w-8 h-8 mb-3" />
-                  <h3 className="text-2xl font-bold mb-2">{service.title}</h3>
-                  <p className="text-white/90">{service.description}</p>
+          {mainServices.slice(0, 4).map((service, index) => {
+            const IconComponent = service.icon;
+            return (
+              <div
+                key={service.title}
+                className={`group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 ${
+                  index === 0 || index === 3 ? 'md:col-span-1 lg:col-span-1' : ''
+                }`}
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="relative h-64">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className={`absolute inset-0 bg-gradient-to-t ${service.gradient} opacity-80`}></div>
+                  
+                  {/* Content Overlay */}
+                  <div className="absolute inset-0 p-6 flex flex-col justify-end text-white">
+                    <IconComponent className="w-8 h-8 mb-3" />
+                    <h3 className="text-2xl font-bold mb-2">{service.title}</h3>
+                    <p className="text-white/90">{service.description}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
 
           {/* Projects Card - Larger */}
           <div className="md:col-span-2 lg:col-span-2 group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
