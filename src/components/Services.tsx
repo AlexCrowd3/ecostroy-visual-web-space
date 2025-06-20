@@ -1,4 +1,3 @@
-
 import { Newspaper, Laptop, FileText, Users, Briefcase, CheckCircle } from 'lucide-react';
 
 const Services = () => {
@@ -103,7 +102,10 @@ const Services = () => {
               <div className={`absolute inset-0 bg-gradient-to-t ${mainServices[4].gradient} opacity-80`}></div>
               
               <div className="absolute inset-0 p-6 flex flex-col justify-end text-white">
-                <mainServices[4].icon className="w-8 h-8 mb-3" />
+                {(() => {
+                  const ProjectIcon = mainServices[4].icon;
+                  return <ProjectIcon className="w-8 h-8 mb-3" />;
+                })()}
                 <h3 className="text-2xl font-bold mb-2">{mainServices[4].title}</h3>
                 <p className="text-white/90">{mainServices[4].description}</p>
               </div>
