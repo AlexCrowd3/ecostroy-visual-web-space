@@ -1,10 +1,13 @@
-import { useState } from 'react';
+
+import { useState, useRef } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Play, Pause, Volume2 } from 'lucide-react';
 
 const Video = () => {
+  const [currentVideo, setCurrentVideo] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef(null);
 
   const videos = [
     {
@@ -13,6 +16,7 @@ const Video = () => {
       description: 'Узнайте больше о нашей истории и подходе к строительству',
       thumbnail: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       duration: '3:45',
+      videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
       featured: true
     },
     {
@@ -20,23 +24,46 @@ const Video = () => {
       title: 'Процесс строительства',
       description: 'Посмотрите, как мы работаем над проектами',
       thumbnail: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      duration: '5:20'
+      duration: '5:20',
+      videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4'
     },
     {
       id: 3,
       title: 'Готовые проекты',
       description: 'Обзор наших завершенных работ',
       thumbnail: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      duration: '4:15'
+      duration: '4:15',
+      videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4'
     },
     {
       id: 4,
       title: 'Технологии строительства',
       description: 'Современные методы и материалы',
       thumbnail: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      duration: '6:30'
+      duration: '6:30',
+      videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4'
     }
   ];
+
+  const handlePlayVideo = (video) => {
+    setCurrentVideo(video);
+    setIsPlaying(true);
+  };
+
+  const togglePlayPause = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
+  const handleVideoEnd = () => {
+    setIsPlaying(false);
+  };
 
   return (
     <div className="min-h-screen">
@@ -59,35 +86,50 @@ const Video = () => {
         </div>
       </section>
 
-      {/* Featured Video */}
+      {/* Main Video Player */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 rounded-2xl p-8">
             <div className="aspect-video bg-gray-900 rounded-xl relative overflow-hidden">
-              <img 
-                src={videos[0].thumbnail} 
-                alt={videos[0].title}
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                <button 
-                  onClick={() => setIsPlaying(!isPlaying)}
-                  className="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors duration-200 group"
-                >
-                  {isPlaying ? (
-                    <Pause className="w-8 h-8 text-gray-900" />
-                  ) : (
-                    <Play className="w-8 h-8 text-gray-900 ml-1" />
-                  )}
-                </button>
-              </div>
-              <div className="absolute bottom-4 left-4 text-white">
-                <span className="bg-black/50 px-2 py-1 rounded text-sm">{videos[0].duration}</span>
-              </div>
+              {currentVideo ? (
+                <video 
+                  ref={videoRef}
+                  src={currentVideo.videoUrl}
+                  className="w-full h-full object-cover"
+                  controls
+                  autoPlay
+                  onEnded={handleVideoEnd}
+                  onPlay={() => setIsPlaying(true)}
+                  onPause={() => setIsPlaying(false)}
+                />
+              ) : (
+                <>
+                  <img 
+                    src={videos[0].thumbnail} 
+                    alt={videos[0].title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                    <button 
+                      onClick={() => handlePlayVideo(videos[0])}
+                      className="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors duration-200 group"
+                    >
+                      <Play className="w-8 h-8 text-gray-900 ml-1" />
+                    </button>
+                  </div>
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <span className="bg-black/50 px-2 py-1 rounded text-sm">{videos[0].duration}</span>
+                  </div>
+                </>
+              )}
             </div>
             <div className="mt-6">
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">{videos[0].title}</h2>
-              <p className="text-gray-600">{videos[0].description}</p>
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                {currentVideo ? currentVideo.title : videos[0].title}
+              </h2>
+              <p className="text-gray-600">
+                {currentVideo ? currentVideo.description : videos[0].description}
+              </p>
             </div>
           </div>
         </div>
@@ -107,7 +149,10 @@ const Video = () => {
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-200">
-                    <button className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center">
+                    <button 
+                      onClick={() => handlePlayVideo(video)}
+                      className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center"
+                    >
                       <Play className="w-5 h-5 text-gray-900 ml-0.5" />
                     </button>
                   </div>
