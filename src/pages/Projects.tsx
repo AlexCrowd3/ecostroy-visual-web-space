@@ -164,10 +164,13 @@ const Projects = () => {
                       <span className="font-semibold">Площадь:</span> {project.area}
                     </div>
                   </div>
-                  <button className="w-full bg-gradient-to-r from-green-500 to-blue-500 text-white py-2 px-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 flex items-center justify-center">
+                  <Link 
+                    to={`/projects/${project.id}`}
+                    className="w-full bg-gradient-to-r from-green-500 to-blue-500 text-white py-2 px-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 flex items-center justify-center"
+                  >
                     Подробнее
                     <ArrowRight className="ml-2" size={16} />
-                  </button>
+                  </Link>
                 </div>
               </div>
             ))}
