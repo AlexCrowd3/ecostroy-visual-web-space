@@ -1,3 +1,4 @@
+
 import { ArrowRight, Play } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -34,41 +35,6 @@ const Hero = () => {
                 <Play className="mr-2" size={20} />
                 Смотреть видео
               </Link>
-            </div>
-            
-            {/* Quick Navigation Links */}
-            <div className="mt-12 pt-8 border-t border-gray-200">
-              <p className="text-lg font-semibold text-gray-900 mb-4">Быстрые переходы:</p>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <Link 
-                  to="/services"
-                  className="text-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105"
-                >
-                  <div className="text-green-500 font-semibold">Услуги</div>
-                  <div className="text-sm text-gray-600">Строительство</div>
-                </Link>
-                <Link 
-                  to="/projects"
-                  className="text-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105"
-                >
-                  <div className="text-blue-500 font-semibold">Проекты</div>
-                  <div className="text-sm text-gray-600">Портфолио</div>
-                </Link>
-                <Link 
-                  to="/news"
-                  className="text-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105"
-                >
-                  <div className="text-purple-500 font-semibold">Новости</div>
-                  <div className="text-sm text-gray-600">События</div>
-                </Link>
-                <Link 
-                  to="/articles"
-                  className="text-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105"
-                >
-                  <div className="text-orange-500 font-semibold">Статьи</div>
-                  <div className="text-sm text-gray-600">Обзоры</div>
-                </Link>
-              </div>
             </div>
           </div>
           <div className="relative">
