@@ -1,26 +1,27 @@
-
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Calendar, User, ArrowRight } from 'lucide-react';
+import { Calendar, User, ArrowRight, Search } from 'lucide-react';
 
 const News = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
 
   const categories = [
     { id: 'all', name: 'Все новости' },
     { id: 'company', name: 'Новости компании' },
     { id: 'industry', name: 'Отрасль' },
     { id: 'tech', name: 'Технологии' },
-    { id: 'eco', name: 'Экология' }
+    { id: 'construction', name: 'Строительство' }
   ];
 
   const news = [
     {
       id: 1,
-      title: 'Новый экологический стандарт в строительстве',
-      excerpt: 'Внедрение инновационных технологий позволяет снизить углеродный след на 40%',
-      category: 'eco',
+      title: 'Новый стандарт качества в строительстве',
+      excerpt: 'Внедрение инновационных технологий позволяет повысить качество строительства на 40%',
+      category: 'construction',
       date: '2024-06-18',
       author: 'Михаил Иванов',
       image: 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
@@ -78,31 +79,45 @@ const News = () => {
     }
   ];
 
-  const filteredNews = selectedCategory === 'all' 
-    ? news 
-    : news.filter(item => item.category === selectedCategory);
+  const filteredNews = news.filter(item => {
+    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
+    const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         item.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
 
-  const featuredNews = news.find(item => item.featured);
-  const regularNews = news.filter(item => !item.featured);
+  const featuredNews = filteredNews.find(item => item.featured);
 
   return (
     <div className="min-h-screen">
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-br from-eco-blue-light via-white to-eco-green-light">
+      <section className="pt-20 pb-16 bg-gradient-to-br from-blue-100 via-white to-green-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
               Новости
-              <span className="bg-gradient-to-r from-eco-green to-eco-blue bg-clip-text text-transparent">
-                {" "}Экострой
+              <span className="bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent">
+                {" "}Строй+
               </span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Следите за последними новостями в области экологического строительства 
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              Следите за последними новостями в области строительства 
               и достижениями нашей компании
             </p>
+            
+            {/* Search Bar */}
+            <div className="max-w-md mx-auto relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Поиск новостей..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -112,38 +127,40 @@ const News = () => {
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Главная новость</h2>
-            <div className="bg-gradient-to-r from-eco-green/10 to-eco-blue/10 rounded-2xl overflow-hidden">
-              <div className="grid lg:grid-cols-2 gap-8 p-8">
-                <div>
-                  <img 
-                    src={featuredNews.image} 
-                    alt={featuredNews.title}
-                    className="w-full h-80 object-cover rounded-xl"
-                  />
-                </div>
-                <div className="flex flex-col justify-center">
-                  <span className="inline-block bg-eco-green text-white px-3 py-1 rounded-full text-sm mb-4 w-fit">
-                    Главная новость
-                  </span>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-4">{featuredNews.title}</h3>
-                  <p className="text-gray-600 mb-6 text-lg leading-relaxed">{featuredNews.excerpt}</p>
-                  <div className="flex items-center space-x-4 text-sm text-gray-500 mb-6">
-                    <div className="flex items-center space-x-1">
-                      <Calendar size={16} />
-                      <span>{new Date(featuredNews.date).toLocaleDateString('ru-RU')}</span>
+            <Link to={`/news/${featuredNews.id}`} className="block">
+              <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02]">
+                <div className="grid lg:grid-cols-2 gap-8 p-8">
+                  <div>
+                    <img 
+                      src={featuredNews.image} 
+                      alt={featuredNews.title}
+                      className="w-full h-80 object-cover rounded-xl"
+                    />
+                  </div>
+                  <div className="flex flex-col justify-center">
+                    <span className="inline-block bg-green-500 text-white px-3 py-1 rounded-full text-sm mb-4 w-fit">
+                      Главная новость
+                    </span>
+                    <h3 className="text-3xl font-bold text-gray-900 mb-4">{featuredNews.title}</h3>
+                    <p className="text-gray-600 mb-6 text-lg leading-relaxed">{featuredNews.excerpt}</p>
+                    <div className="flex items-center space-x-4 text-sm text-gray-500 mb-6">
+                      <div className="flex items-center space-x-1">
+                        <Calendar size={16} />
+                        <span>{new Date(featuredNews.date).toLocaleDateString('ru-RU')}</span>
+                      </div>
+                      <div className="flex items-center space-x-1">
+                        <User size={16} />
+                        <span>{featuredNews.author}</span>
+                      </div>
                     </div>
-                    <div className="flex items-center space-x-1">
-                      <User size={16} />
-                      <span>{featuredNews.author}</span>
+                    <div className="flex items-center text-blue-500 font-semibold">
+                      Читать полностью
+                      <ArrowRight className="ml-2" size={20} />
                     </div>
                   </div>
-                  <button className="bg-gradient-to-r from-eco-green to-eco-blue text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center w-fit">
-                    Читать полностью
-                    <ArrowRight className="ml-2" size={20} />
-                  </button>
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
         </section>
       )}
@@ -158,8 +175,8 @@ const News = () => {
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-2 rounded-full font-medium transition-all duration-200 ${
                   selectedCategory === category.id
-                    ? 'bg-gradient-to-r from-eco-green to-eco-blue text-white shadow-lg'
-                    : 'bg-white text-gray-600 hover:bg-gray-100'
+                    ? 'bg-gradient-to-r from-green-500 to-blue-500 text-white shadow-lg'
+                    : 'bg-white text-gray-600 hover:bg-gray-100 shadow-md'
                 }`}
               >
                 {category.name}
@@ -174,31 +191,42 @@ const News = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredNews.filter(item => !item.featured).map((item) => (
-              <article key={item.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <img 
-                  src={item.image} 
-                  alt={item.title}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <div className="flex items-center space-x-4 text-sm text-gray-500 mb-3">
-                    <div className="flex items-center space-x-1">
-                      <Calendar size={14} />
-                      <span>{new Date(item.date).toLocaleDateString('ru-RU')}</span>
-                    </div>
-                    <div className="flex items-center space-x-1">
-                      <User size={14} />
-                      <span>{item.author}</span>
+              <Link key={item.id} to={`/news/${item.id}`}>
+                <article className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-gray-100">
+                  <div className="relative">
+                    <img 
+                      src={item.image} 
+                      alt={item.title}
+                      className="w-full h-48 object-cover"
+                    />
+                    <div className="absolute top-4 left-4">
+                      <span className="bg-white/80 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-semibold text-gray-700">
+                        {categories.find(cat => cat.id === item.category)?.name}
+                      </span>
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">{item.title}</h3>
-                  <p className="text-gray-600 mb-4 line-clamp-3">{item.excerpt}</p>
-                  <button className="text-eco-blue hover:text-eco-green font-semibold flex items-center transition-colors duration-200">
-                    Читать далее
-                    <ArrowRight className="ml-1" size={16} />
-                  </button>
-                </div>
-              </article>
+                  <div className="p-6">
+                    <div className="flex items-center space-x-4 text-sm text-gray-500 mb-3">
+                      <div className="flex items-center space-x-1">
+                        <Calendar size={14} className="text-blue-500" />
+                        <span>{new Date(item.date).toLocaleDateString('ru-RU')}</span>
+                      </div>
+                      <div className="flex items-center space-x-1">
+                        <User size={14} className="text-green-500" />
+                        <span>{item.author}</span>
+                      </div>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 hover:text-blue-500 transition-colors">
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-600 mb-4 line-clamp-3">{item.excerpt}</p>
+                    <div className="flex items-center text-blue-500 hover:text-green-500 font-semibold transition-colors duration-200">
+                      Читать далее
+                      <ArrowRight className="ml-1" size={16} />
+                    </div>
+                  </div>
+                </article>
+              </Link>
             ))}
           </div>
         </div>
