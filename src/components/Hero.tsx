@@ -1,5 +1,5 @@
 
-import { ArrowRight, Play } from 'lucide-react';
+import { ArrowRight, Play, Newspaper, Wrench, FileText, FolderOpen, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Hero = () => {
@@ -68,9 +68,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/90 to-blue-700/90"></div>
               <div className="relative h-full p-8 flex flex-col justify-between text-white">
                 <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z" clipRule="evenodd" />
-                  </svg>
+                  <Newspaper className="w-6 h-6" />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold mb-2">Новости</h3>
@@ -87,9 +85,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-green-500/90 to-green-700/90"></div>
               <div className="relative h-full p-8 flex flex-col justify-between text-white">
                 <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
+                  <Wrench className="w-6 h-6" />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold mb-2">Услуги</h3>
@@ -106,9 +102,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/90 to-purple-700/90"></div>
               <div className="relative h-full p-8 flex flex-col justify-between text-white">
                 <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clipRule="evenodd" />
-                  </svg>
+                  <FileText className="w-6 h-6" />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold mb-2">Статьи</h3>
@@ -128,9 +122,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-orange-500/90 to-red-600/90"></div>
               <div className="relative h-full p-8 flex flex-col justify-between text-white">
                 <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                  </svg>
+                  <FolderOpen className="w-6 h-6" />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold mb-2">Проекты</h3>
@@ -147,9 +139,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-teal-500/90 to-cyan-600/90"></div>
               <div className="relative h-full p-8 flex flex-col justify-between text-white">
                 <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                  </svg>
+                  <Users className="w-6 h-6" />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold mb-2">О компании</h3>
