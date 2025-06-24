@@ -25,9 +25,9 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <Link to="/">
               <img 
-                src="/lovable-uploads/5be6295e-99ed-4db4-86cf-6175343e0498.png" 
+                src="/img/logo_dark.png" 
                 alt="Экострой" 
-                className="h-8 w-auto mb-6 filter brightness-0 invert"
+                className="h-8 w-auto mb-6 "
               />
             </Link>
             <p className="text-gray-300 mb-6">
@@ -107,7 +107,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © 2024 Экострой. Все права защищены.
+              © 2025 Экострой. Все права защищены.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="text-gray-400 hover:text-eco-green text-sm transition-colors">

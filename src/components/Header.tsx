@@ -30,7 +30,7 @@ const Header = () => {
           <div className="flex-shrink-0">
             <Link to="/">
               <img 
-                src="/lovable-uploads/5be6295e-99ed-4db4-86cf-6175343e0498.png" 
+                src="/img/logo.png" 
                 alt="Экострой" 
                 className="h-8 w-auto"
               />
