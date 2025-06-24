@@ -1,5 +1,5 @@
 
-import { ArrowRight, Play } from 'lucide-react';
+import { ArrowRight, Play, Home, Building, Newspaper, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Hero = () => {
@@ -54,6 +54,58 @@ const Hero = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Разделы */}
+        <div className="mt-20">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Разделы
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <Link 
+              to="/services"
+              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 text-center border border-gray-100"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Home className="text-white" size={32} />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Услуги</h3>
+              <p className="text-gray-600 text-sm">Строительные услуги</p>
+            </Link>
+
+            <Link 
+              to="/projects"
+              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 text-center border border-gray-100"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Building className="text-white" size={32} />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Проекты</h3>
+              <p className="text-gray-600 text-sm">Наши работы</p>
+            </Link>
+
+            <Link 
+              to="/news"
+              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 text-center border border-gray-100"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Newspaper className="text-white" size={32} />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Новости</h3>
+              <p className="text-gray-600 text-sm">Последние события</p>
+            </Link>
+
+            <Link 
+              to="/articles"
+              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 text-center border border-gray-100"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <FileText className="text-white" size={32} />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Статьи</h3>
+              <p className="text-gray-600 text-sm">Полезная информация</p>
+            </Link>
           </div>
         </div>
       </div>
