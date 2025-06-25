@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -16,11 +15,11 @@ import NewsDetail from "./pages/NewsDetail";
 import ArticleDetail from "./pages/ArticleDetail";
 import ServiceDetail from "./pages/ServiceDetail";
 import ProjectDetail from "./pages/ProjectDetail";
+import { AdminPanel } from './pages/AdminPanel';
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-// Компонент для прокрутки в начало страницы при смене роута
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 
@@ -50,7 +49,7 @@ const App = () => (
           <Route path="/articles/:id" element={<ArticleDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/video" element={<Video />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/admin/:secretKey" element={<AdminPanel />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
