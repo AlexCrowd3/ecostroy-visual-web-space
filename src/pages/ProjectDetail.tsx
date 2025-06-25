@@ -1,4 +1,3 @@
-
 import { useParams, Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -7,7 +6,6 @@ import { ArrowLeft, Calendar, MapPin, Users, Clock } from 'lucide-react';
 const ProjectDetail = () => {
   const { id } = useParams();
   
-  // Получаем проект по ID (в реальном приложении это был бы API вызов)
   const project = {
     id: parseInt(id || '1'),
     title: 'Жилой комплекс "Солнечный"',
@@ -38,7 +36,6 @@ const ProjectDetail = () => {
     <div className="min-h-screen">
       <Header />
       
-      {/* Hero Section */}
       <section className="pt-20 pb-8 bg-gradient-to-br from-blue-100 via-white to-green-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link 
@@ -103,7 +100,6 @@ const ProjectDetail = () => {
         </div>
       </section>
 
-      {/* Project Details */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-12">
@@ -146,7 +142,6 @@ const ProjectDetail = () => {
         </div>
       </section>
 
-      {/* Gallery */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Галерея проекта</h2>

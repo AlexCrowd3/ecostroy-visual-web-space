@@ -1,4 +1,3 @@
-
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Award, Users, Target, Zap, Calendar, MapPin, Phone, Mail } from 'lucide-react';
@@ -104,7 +103,6 @@ const About = () => {
     <div className="min-h-screen">
       <Header />
       
-      {/* Hero Section */}
       <section className="pt-20 pb-16 bg-gradient-to-br from-eco-blue-light via-white to-eco-green-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -122,7 +120,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Company Story */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -167,7 +164,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Values */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -189,7 +185,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Timeline */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -217,7 +212,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -245,7 +239,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Certifications */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -264,7 +257,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Contact Info */}
       <section className="py-16 bg-gradient-to-r from-eco-green to-eco-blue">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <h2 className="text-3xl font-bold mb-8">Свяжитесь с нами</h2>

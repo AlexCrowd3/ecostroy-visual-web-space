@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
@@ -92,7 +91,6 @@ const Projects = () => {
     <div className="min-h-screen">
       <Header />
       
-      {/* Hero Section */}
       <section className="pt-20 pb-16 bg-gradient-to-br from-blue-100 via-white to-green-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -109,7 +107,6 @@ const Projects = () => {
         </div>
       </section>
 
-      {/* Categories Filter */}
       <section className="py-8 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-4 justify-center">
@@ -130,7 +127,6 @@ const Projects = () => {
         </div>
       </section>
 
-      {/* Projects Grid */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

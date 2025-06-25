@@ -1,4 +1,3 @@
-
 import { Award, Users, Clock, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -27,7 +26,7 @@ const About = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               О компании
               <span className="bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent">
-                {" "}Строй+
+                {" "}Экострой
               </span>
             </h2>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">

@@ -1,4 +1,3 @@
-
 import { ArrowRight, Home, Building, Wrench, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 

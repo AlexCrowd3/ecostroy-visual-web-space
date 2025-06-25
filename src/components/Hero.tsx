@@ -1,4 +1,3 @@
-
 import { ArrowRight, Play, Newspaper, Wrench, FileText, FolderOpen, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -28,13 +27,6 @@ const Hero = () => {
                 Наши услуги
                 <ArrowRight className="ml-2" size={20} />
               </Link>
-              <Link 
-                to="/video"
-                className="border-2 border-blue-500 text-blue-500 px-8 py-4 rounded-full font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 flex items-center justify-center"
-              >
-                <Play className="mr-2" size={20} />
-                Смотреть видео
-              </Link>
             </div>
           </div>
           <div className="relative">
@@ -57,10 +49,8 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Разделы в стиле как на изображении */}
         <div className="mt-20">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-            {/* Новости */}
             <Link 
               to="/news"
               className="group relative overflow-hidden rounded-2xl h-48 bg-gradient-to-br from-blue-500 to-blue-700 hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
@@ -77,7 +67,6 @@ const Hero = () => {
               </div>
             </Link>
 
-            {/* Услуги */}
             <Link 
               to="/services"
               className="group relative overflow-hidden rounded-2xl h-48 bg-gradient-to-br from-green-500 to-green-700 hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
@@ -94,7 +83,6 @@ const Hero = () => {
               </div>
             </Link>
 
-            {/* Статьи */}
             <Link 
               to="/articles"
               className="group relative overflow-hidden rounded-2xl h-48 bg-gradient-to-br from-purple-500 to-purple-700 hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
@@ -112,9 +100,7 @@ const Hero = () => {
             </Link>
           </div>
 
-          {/* Нижний ряд - широкие карточки */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {/* Проекты */}
             <Link 
               to="/projects"
               className="group relative overflow-hidden rounded-2xl h-48 bg-gradient-to-br from-orange-500 to-red-600 hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
@@ -131,7 +117,6 @@ const Hero = () => {
               </div>
             </Link>
 
-            {/* О компании */}
             <Link 
               to="/about"
               className="group relative overflow-hidden rounded-2xl h-48 bg-gradient-to-br from-teal-500 to-cyan-600 hover:shadow-2xl transform hover:scale-105 transition-all duration-300"

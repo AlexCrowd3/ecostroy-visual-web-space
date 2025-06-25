@@ -92,14 +92,13 @@ const News = () => {
     <div className="min-h-screen">
       <Header />
       
-      {/* Hero Section */}
       <section className="pt-20 pb-16 bg-gradient-to-br from-blue-100 via-white to-green-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
               Новости
               <span className="bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent">
-                {" "}Строй+
+                {" "}Экострой
               </span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
@@ -107,7 +106,6 @@ const News = () => {
               и достижениями нашей компании
             </p>
             
-            {/* Search Bar */}
             <div className="max-w-md mx-auto relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
@@ -122,11 +120,10 @@ const News = () => {
         </div>
       </section>
 
-      {/* Featured News */}
       {featuredNews && (
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Главная новость</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Последняя новость</h2>
             <Link to={`/news/${featuredNews.id}`} className="block">
               <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02]">
                 <div className="grid lg:grid-cols-2 gap-8 p-8">
@@ -139,7 +136,7 @@ const News = () => {
                   </div>
                   <div className="flex flex-col justify-center">
                     <span className="inline-block bg-green-500 text-white px-3 py-1 rounded-full text-sm mb-4 w-fit">
-                      Главная новость
+                      Последняя новость
                     </span>
                     <h3 className="text-3xl font-bold text-gray-900 mb-4">{featuredNews.title}</h3>
                     <p className="text-gray-600 mb-6 text-lg leading-relaxed">{featuredNews.excerpt}</p>
@@ -165,7 +162,6 @@ const News = () => {
         </section>
       )}
 
-      {/* Categories */}
       <section className="py-8 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-4 justify-center">
@@ -186,7 +182,6 @@ const News = () => {
         </div>
       </section>
 
-      {/* News Grid */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

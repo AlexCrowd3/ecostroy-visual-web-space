@@ -1,4 +1,3 @@
-
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Check, ArrowRight, Star } from 'lucide-react';
@@ -84,7 +83,6 @@ const Services = () => {
     <div className="min-h-screen">
       <Header />
       
-      {/* Hero Section */}
       <section className="pt-20 pb-16 bg-gradient-to-br from-eco-blue-light via-white to-eco-green-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -102,7 +100,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Services Grid */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -148,7 +145,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Advantages */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -167,7 +163,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-eco-green to-eco-blue">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">

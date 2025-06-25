@@ -1,8 +1,7 @@
-
 import { useParams, Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Calendar, User, ArrowLeft, Clock, Tag } from 'lucide-react';
+import { Calendar, User, ArrowLeft} from 'lucide-react';
 
 const ArticleDetail = () => {
   const { id } = useParams();
@@ -24,7 +23,6 @@ const ArticleDetail = () => {
     category: 'materials',
     date: '2024-06-15',
     author: 'Михаил Материалов',
-    readTime: '8 мин',
     image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
     tags: ['материалы', 'инновации', 'качество']
   };
@@ -64,10 +62,6 @@ const ArticleDetail = () => {
               <div className="flex items-center space-x-2">
                 <User size={18} />
                 <span>{article.author}</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Clock size={18} />
-                <span>{article.readTime}</span>
               </div>
             </div>
           </div>

@@ -1,9 +1,8 @@
-
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Calendar, User, ArrowRight, Search, Clock, Tag } from 'lucide-react';
+import { Calendar, User, ArrowRight, Search, Clock} from 'lucide-react';
 
 const Articles = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -25,7 +24,6 @@ const Articles = () => {
       category: 'materials',
       date: '2024-06-15',
       author: 'Михаил Материалов',
-      readTime: '8 мин',
       image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       tags: ['материалы', 'инновации', 'качество'],
       featured: true
@@ -37,7 +35,6 @@ const Articles = () => {
       category: 'technologies',
       date: '2024-06-10',
       author: 'Анна Технологова',
-      readTime: '6 мин',
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       tags: ['BIM', 'проектирование', 'технологии']
     },
@@ -48,7 +45,6 @@ const Articles = () => {
       category: 'design',
       date: '2024-06-05',
       author: 'Елена Дизайнова',
-      readTime: '5 мин',
       image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       tags: ['планировка', 'дизайн', 'тренды']
     },
@@ -59,7 +55,6 @@ const Articles = () => {
       category: 'technologies',
       date: '2024-05-28',
       author: 'Дмитрий Энергетиков',
-      readTime: '7 мин',
       image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       tags: ['энергоэффективность', 'технологии']
     },
@@ -70,7 +65,6 @@ const Articles = () => {
       category: 'tips',
       date: '2024-05-20',
       author: 'Сергей Советов',
-      readTime: '4 мин',
       image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       tags: ['советы', 'выбор', 'подрядчик']
     },
@@ -81,7 +75,6 @@ const Articles = () => {
       category: 'technologies',
       date: '2024-05-15',
       author: 'Ольга Умнова',
-      readTime: '9 мин',
       image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       tags: ['умный дом', 'автоматизация']
     }
@@ -101,7 +94,6 @@ const Articles = () => {
     <div className="min-h-screen">
       <Header />
       
-      {/* Hero Section */}
       <section className="pt-20 pb-16 bg-gradient-to-br from-blue-100 via-white to-green-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -115,7 +107,6 @@ const Articles = () => {
               Полезные статьи о строительстве, материалах и современных технологиях
             </p>
             
-            {/* Search Bar */}
             <div className="max-w-md mx-auto relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
@@ -130,11 +121,10 @@ const Articles = () => {
         </div>
       </section>
 
-      {/* Featured Article */}
       {featuredArticle && (
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Рекомендуемая статья</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Последняя статья</h2>
             <Link to={`/articles/${featuredArticle.id}`} className="block">
               <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02]">
                 <div className="grid lg:grid-cols-2 gap-8 p-8">
@@ -164,10 +154,6 @@ const Articles = () => {
                         <User size={16} />
                         <span>{featuredArticle.author}</span>
                       </div>
-                      <div className="flex items-center space-x-1">
-                        <Clock size={16} />
-                        <span>{featuredArticle.readTime}</span>
-                      </div>
                     </div>
                     <div className="flex items-center text-blue-500 font-semibold">
                       Читать полностью
@@ -181,7 +167,6 @@ const Articles = () => {
         </section>
       )}
 
-      {/* Categories */}
       <section className="py-8 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-4 justify-center">
@@ -202,7 +187,6 @@ const Articles = () => {
         </div>
       </section>
 
-      {/* Articles Grid */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -237,10 +221,6 @@ const Articles = () => {
                       <div className="flex items-center space-x-1">
                         <User size={14} className="text-green-500" />
                         <span>{article.author}</span>
-                      </div>
-                      <div className="flex items-center space-x-1">
-                        <Clock size={14} className="text-blue-500" />
-                        <span>{article.readTime}</span>
                       </div>
                     </div>
                     <div className="flex items-center text-blue-500 hover:text-green-500 font-semibold transition-colors duration-200">
