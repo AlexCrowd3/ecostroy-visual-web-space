@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Calendar, User, ArrowRight, Search, Clock} from 'lucide-react';
+import { Calendar, User, ArrowRight, Search} from 'lucide-react';
 
 const Articles = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');

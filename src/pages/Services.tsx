@@ -9,7 +9,6 @@ const Services = () => {
       title: 'Проектирование зданий',
       description: 'Создание архитектурных и инженерных проектов с учетом экологических стандартов',
       features: ['3D-моделирование', 'Энергоэффективность', 'Экологические материалы', 'Инновационные решения'],
-      price: 'от 50 000 ₽',
       image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       popular: false
     },
@@ -18,7 +17,6 @@ const Services = () => {
       title: 'Строительство домов',
       description: 'Полный цикл строительства экологичных частных домов и коттеджей',
       features: ['Экоматериалы', 'Энергосбережение', 'Умный дом', 'Гарантия 10 лет'],
-      price: 'от 2 500 000 ₽',
       image: 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       popular: true
     },
@@ -27,7 +25,6 @@ const Services = () => {
       title: 'Коммерческое строительство',
       description: 'Строительство офисных зданий, торговых центров и промышленных объектов',
       features: ['Большие объемы', 'Соблюдение сроков', 'Сертификация LEED', 'Техподдержка'],
-      price: 'от 15 000 000 ₽',
       image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       popular: false
     },
@@ -36,7 +33,6 @@ const Services = () => {
       title: 'Реконструкция и ремонт',
       description: 'Модернизация существующих зданий с применением экотехнологий',
       features: ['Энергоаудит', 'Утепление', 'Замена коммуникаций', 'Современный дизайн'],
-      price: 'от 150 000 ₽',
       image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       popular: false
     },
@@ -45,7 +41,6 @@ const Services = () => {
       title: 'Консультации и экспертиза',
       description: 'Профессиональные консультации по экологическому строительству',
       features: ['Техническая экспертиза', 'Оценка проектов', 'Рекомендации', 'Сопровождение'],
-      price: 'от 5 000 ₽',
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       popular: false
     },
@@ -54,7 +49,6 @@ const Services = () => {
       title: 'Ландшафтный дизайн',
       description: 'Создание экологичных ландшафтных решений и озеленение территорий',
       features: ['Планирование участка', 'Подбор растений', 'Системы полива', 'Уход и обслуживание'],
-      price: 'от 25 000 ₽',
       image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       popular: false
     }
@@ -132,7 +126,6 @@ const Services = () => {
                   </ul>
                   
                   <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold text-eco-blue">{service.price}</span>
                     <button className="bg-gradient-to-r from-eco-green to-eco-blue text-white px-4 py-2 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center">
                       Заказать
                       <ArrowRight className="ml-1" size={16} />
@@ -166,7 +159,7 @@ const Services = () => {
       <section className="py-16 bg-gradient-to-r from-eco-green to-eco-blue">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Готовы начать ваш проект?
+            Готовы начать Ваш Проект?
           </h2>
           <p className="text-xl text-white/90 mb-8">
             Свяжитесь с нами для бесплатной консультации

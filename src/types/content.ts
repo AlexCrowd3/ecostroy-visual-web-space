@@ -1,15 +1,13 @@
-// Тип для новости
 export type NewsItem = {
   id: string;
   title: string;
   content: string;
-  image: string; // URL изображения
+  image: string;
   author: string;
-  publishDate: string; // Формат: 'YYYY-MM-DD'
+  publishDate: string;
   articleLink: string;
 };
 
-// Тип для статьи
 export type ArticleItem = {
   id: string;
   title: string;
@@ -20,7 +18,6 @@ export type ArticleItem = {
   tags: string[];
 };
 
-// Тип для проекта
 export type ProjectItem = {
   id: string;
   title: string;

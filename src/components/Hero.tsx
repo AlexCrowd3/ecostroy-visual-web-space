@@ -1,4 +1,4 @@
-import { ArrowRight, Play, Newspaper, Wrench, FileText, FolderOpen, Users } from 'lucide-react';
+import { ArrowRight, Newspaper, Wrench, FileText, FolderOpen, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Hero = () => {
@@ -8,12 +8,12 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Качественное
+              Качество
               <span className="bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent">
-                {" "}строительство
+                {" "}Проекта
               </span>
               <br />
-              для вашего будущего
+              для Вас и Будущего Строительства
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
               Создаем надежные и современные здания с использованием 
@@ -55,7 +55,7 @@ const Hero = () => {
               to="/news"
               className="group relative overflow-hidden rounded-2xl h-48 bg-gradient-to-br from-blue-500 to-blue-700 hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/90 to-blue-700/90"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/60 to-blue-700/60 backdrop-brightness-75 backdrop-saturate-50"></div>
               <div className="relative h-full p-8 flex flex-col justify-between text-white">
                 <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
                   <Newspaper className="w-6 h-6" />
@@ -71,7 +71,7 @@ const Hero = () => {
               to="/services"
               className="group relative overflow-hidden rounded-2xl h-48 bg-gradient-to-br from-green-500 to-green-700 hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-green-500/90 to-green-700/90"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-green-500/60 to-green-700/60 backdrop-brightness-75 backdrop-saturate-50"></div>
               <div className="relative h-full p-8 flex flex-col justify-between text-white">
                 <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
                   <Wrench className="w-6 h-6" />
@@ -87,7 +87,7 @@ const Hero = () => {
               to="/articles"
               className="group relative overflow-hidden rounded-2xl h-48 bg-gradient-to-br from-purple-500 to-purple-700 hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/90 to-purple-700/90"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/60 to-purple-700/60 backdrop-brightness-75 backdrop-saturate-50"></div>
               <div className="relative h-full p-8 flex flex-col justify-between text-white">
                 <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
                   <FileText className="w-6 h-6" />
@@ -105,7 +105,7 @@ const Hero = () => {
               to="/projects"
               className="group relative overflow-hidden rounded-2xl h-48 bg-gradient-to-br from-orange-500 to-red-600 hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-orange-500/90 to-red-600/90"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-orange-500/60 to-red-700/60 backdrop-brightness-45 backdrop-saturate-50"></div>
               <div className="relative h-full p-8 flex flex-col justify-between text-white">
                 <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
                   <FolderOpen className="w-6 h-6" />
@@ -121,7 +121,7 @@ const Hero = () => {
               to="/about"
               className="group relative overflow-hidden rounded-2xl h-48 bg-gradient-to-br from-teal-500 to-cyan-600 hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-teal-500/90 to-cyan-600/90"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-teal-500/60 to-cyan-600/60 backdrop-brightness-45 backdrop-saturate-50"></div>
               <div className="relative h-full p-8 flex flex-col justify-between text-white">
                 <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
                   <Users className="w-6 h-6" />

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Calendar, MapPin, ArrowRight, Filter } from 'lucide-react';
+import { Calendar, MapPin, ArrowRight } from 'lucide-react';
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -72,6 +72,391 @@ const Projects = () => {
     },
     {
       id: 6,
+      title: 'Логистический центр',
+      category: 'industrial',
+      location: 'г. Казань',
+      completedDate: '2023-10-20',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      description: 'Крупный логистический комплекс с современным оборудованием',
+      area: '40,000 м²',
+      status: 'Завершен'
+    },
+    {
+      id: 7,
+      title: 'Логистический центр',
+      category: 'industrial',
+      location: 'г. Казань',
+      completedDate: '2023-10-20',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      description: 'Крупный логистический комплекс с современным оборудованием',
+      area: '40,000 м²',
+      status: 'Завершен'
+    },
+    {
+      id: 8,
+      title: 'Логистический центр',
+      category: 'industrial',
+      location: 'г. Казань',
+      completedDate: '2023-10-20',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      description: 'Крупный логистический комплекс с современным оборудованием',
+      area: '40,000 м²',
+      status: 'Завершен'
+    },
+    {
+      id: 9,
+      title: 'Логистический центр',
+      category: 'industrial',
+      location: 'г. Казань',
+      completedDate: '2023-10-20',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      description: 'Крупный логистический комплекс с современным оборудованием',
+      area: '40,000 м²',
+      status: 'Завершен'
+    },
+    {
+      id: 10,
+      title: 'Логистический центр',
+      category: 'industrial',
+      location: 'г. Казань',
+      completedDate: '2023-10-20',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      description: 'Крупный логистический комплекс с современным оборудованием',
+      area: '40,000 м²',
+      status: 'Завершен'
+    },
+    {
+      id: 11,
+      title: 'Логистический центр',
+      category: 'industrial',
+      location: 'г. Казань',
+      completedDate: '2023-10-20',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      description: 'Крупный логистический комплекс с современным оборудованием',
+      area: '40,000 м²',
+      status: 'Завершен'
+    },
+    {
+      id: 12,
+      title: 'Логистический центр',
+      category: 'industrial',
+      location: 'г. Казань',
+      completedDate: '2023-10-20',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      description: 'Крупный логистический комплекс с современным оборудованием',
+      area: '40,000 м²',
+      status: 'Завершен'
+    },
+    {
+      id: 13,
+      title: 'Логистический центр',
+      category: 'industrial',
+      location: 'г. Казань',
+      completedDate: '2023-10-20',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      description: 'Крупный логистический комплекс с современным оборудованием',
+      area: '40,000 м²',
+      status: 'Завершен'
+    },
+    {
+      id: 14,
+      title: 'Логистический центр',
+      category: 'industrial',
+      location: 'г. Казань',
+      completedDate: '2023-10-20',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      description: 'Крупный логистический комплекс с современным оборудованием',
+      area: '40,000 м²',
+      status: 'Завершен'
+    },
+    {
+      id: 15,
+      title: 'Логистический центр',
+      category: 'industrial',
+      location: 'г. Казань',
+      completedDate: '2023-10-20',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      description: 'Крупный логистический комплекс с современным оборудованием',
+      area: '40,000 м²',
+      status: 'Завершен'
+    },
+    {
+      id: 16,
+      title: 'Логистический центр',
+      category: 'industrial',
+      location: 'г. Казань',
+      completedDate: '2023-10-20',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      description: 'Крупный логистический комплекс с современным оборудованием',
+      area: '40,000 м²',
+      status: 'Завершен'
+    },
+    {
+      id: 17,
+      title: 'Логистический центр',
+      category: 'industrial',
+      location: 'г. Казань',
+      completedDate: '2023-10-20',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      description: 'Крупный логистический комплекс с современным оборудованием',
+      area: '40,000 м²',
+      status: 'Завершен'
+    },
+    {
+      id: 18,
+      title: 'Логистический центр',
+      category: 'industrial',
+      location: 'г. Казань',
+      completedDate: '2023-10-20',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      description: 'Крупный логистический комплекс с современным оборудованием',
+      area: '40,000 м²',
+      status: 'Завершен'
+    },
+    {
+      id: 19,
+      title: 'Логистический центр',
+      category: 'industrial',
+      location: 'г. Казань',
+      completedDate: '2023-10-20',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      description: 'Крупный логистический комплекс с современным оборудованием',
+      area: '40,000 м²',
+      status: 'Завершен'
+    },
+    {
+      id: 20,
+      title: 'Логистический центр',
+      category: 'industrial',
+      location: 'г. Казань',
+      completedDate: '2023-10-20',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      description: 'Крупный логистический комплекс с современным оборудованием',
+      area: '40,000 м²',
+      status: 'Завершен'
+    },
+    {
+      id: 21,
+      title: 'Жилой комплекс "Солнечный"',
+      category: 'residential',
+      location: 'г. Москва',
+      completedDate: '2024-05-15',
+      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      description: 'Современный жилой комплекс с развитой инфраструктурой',
+      area: '15,000 м²',
+      status: 'Завершен'
+    },
+    {
+      id: 22,
+      title: 'Торговый центр "Галерея"',
+      category: 'commercial',
+      location: 'г. Санкт-Петербург',
+      completedDate: '2024-03-20',
+      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      description: 'Многофункциональный торговый комплекс в центре города',
+      area: '25,000 м²',
+      status: 'Завершен'
+    },
+    {
+      id: 23,
+      title: 'Производственный комплекс',
+      category: 'industrial',
+      location: 'г. Екатеринбург',
+      completedDate: '2024-01-10',
+      image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      description: 'Современный производственный комплекс с автоматизацией',
+      area: '30,000 м²',
+      status: 'Завершен'
+    },
+    {
+      id: 24,
+      title: 'Офисный центр "Бизнес Плаза"',
+      category: 'commercial',
+      location: 'г. Новосибирск',
+      completedDate: '2023-12-05',
+      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      description: 'Премиальный офисный центр класса А',
+      area: '20,000 м²',
+      status: 'Завершен'
+    },
+    {
+      id: 25,
+      title: 'Коттеджный поселок "Дубрава"',
+      category: 'residential',
+      location: 'Московская область',
+      completedDate: '2023-11-15',
+      image: 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      description: 'Элитный коттеджный поселок с собственной инфраструктурой',
+      area: '50,000 м²',
+      status: 'Завершен'
+    },
+    {
+      id: 26,
+      title: 'Логистический центр',
+      category: 'industrial',
+      location: 'г. Казань',
+      completedDate: '2023-10-20',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      description: 'Крупный логистический комплекс с современным оборудованием',
+      area: '40,000 м²',
+      status: 'Завершен'
+    },
+    {
+      id: 27,
+      title: 'Логистический центр',
+      category: 'industrial',
+      location: 'г. Казань',
+      completedDate: '2023-10-20',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      description: 'Крупный логистический комплекс с современным оборудованием',
+      area: '40,000 м²',
+      status: 'Завершен'
+    },
+    {
+      id: 28,
+      title: 'Логистический центр',
+      category: 'industrial',
+      location: 'г. Казань',
+      completedDate: '2023-10-20',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      description: 'Крупный логистический комплекс с современным оборудованием',
+      area: '40,000 м²',
+      status: 'Завершен'
+    },
+    {
+      id: 29,
+      title: 'Логистический центр',
+      category: 'industrial',
+      location: 'г. Казань',
+      completedDate: '2023-10-20',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      description: 'Крупный логистический комплекс с современным оборудованием',
+      area: '40,000 м²',
+      status: 'Завершен'
+    },
+    {
+      id: 30,
+      title: 'Логистический центр',
+      category: 'industrial',
+      location: 'г. Казань',
+      completedDate: '2023-10-20',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      description: 'Крупный логистический комплекс с современным оборудованием',
+      area: '40,000 м²',
+      status: 'Завершен'
+    },
+    {
+      id: 31,
+      title: 'Логистический центр',
+      category: 'industrial',
+      location: 'г. Казань',
+      completedDate: '2023-10-20',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      description: 'Крупный логистический комплекс с современным оборудованием',
+      area: '40,000 м²',
+      status: 'Завершен'
+    },
+    {
+      id: 32,
+      title: 'Логистический центр',
+      category: 'industrial',
+      location: 'г. Казань',
+      completedDate: '2023-10-20',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      description: 'Крупный логистический комплекс с современным оборудованием',
+      area: '40,000 м²',
+      status: 'Завершен'
+    },
+    {
+      id: 33,
+      title: 'Логистический центр',
+      category: 'industrial',
+      location: 'г. Казань',
+      completedDate: '2023-10-20',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      description: 'Крупный логистический комплекс с современным оборудованием',
+      area: '40,000 м²',
+      status: 'Завершен'
+    },
+    {
+      id: 34,
+      title: 'Логистический центр',
+      category: 'industrial',
+      location: 'г. Казань',
+      completedDate: '2023-10-20',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      description: 'Крупный логистический комплекс с современным оборудованием',
+      area: '40,000 м²',
+      status: 'Завершен'
+    },
+    {
+      id: 35,
+      title: 'Логистический центр',
+      category: 'industrial',
+      location: 'г. Казань',
+      completedDate: '2023-10-20',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      description: 'Крупный логистический комплекс с современным оборудованием',
+      area: '40,000 м²',
+      status: 'Завершен'
+    },
+    {
+      id: 36,
+      title: 'Логистический центр',
+      category: 'industrial',
+      location: 'г. Казань',
+      completedDate: '2023-10-20',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      description: 'Крупный логистический комплекс с современным оборудованием',
+      area: '40,000 м²',
+      status: 'Завершен'
+    },
+    {
+      id: 37,
+      title: 'Логистический центр',
+      category: 'industrial',
+      location: 'г. Казань',
+      completedDate: '2023-10-20',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      description: 'Крупный логистический комплекс с современным оборудованием',
+      area: '40,000 м²',
+      status: 'Завершен'
+    },
+    {
+      id: 38,
+      title: 'Логистический центр',
+      category: 'industrial',
+      location: 'г. Казань',
+      completedDate: '2023-10-20',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      description: 'Крупный логистический комплекс с современным оборудованием',
+      area: '40,000 м²',
+      status: 'Завершен'
+    },
+    {
+      id: 39,
+      title: 'Логистический центр',
+      category: 'industrial',
+      location: 'г. Казань',
+      completedDate: '2023-10-20',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      description: 'Крупный логистический комплекс с современным оборудованием',
+      area: '40,000 м²',
+      status: 'Завершен'
+    },
+    {
+      id: 40,
+      title: 'Логистический центр',
+      category: 'industrial',
+      location: 'г. Казань',
+      completedDate: '2023-10-20',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      description: 'Крупный логистический комплекс с современным оборудованием',
+      area: '40,000 м²',
+      status: 'Завершен'
+    },
+    {
+      id: 41,
       title: 'Логистический центр',
       category: 'industrial',
       location: 'г. Казань',

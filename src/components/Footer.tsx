@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Phone, Mail, MapPin} from 'lucide-react';
 
 const Footer = () => {
   const quickLinks = [
@@ -23,7 +23,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <Link to="/">
               <img 
-                src="/img/logo_dark.png" 
+                src="/img/logo2_dark.png" 
                 alt="Экострой" 
                 className="h-8 w-auto mb-6 "
               />

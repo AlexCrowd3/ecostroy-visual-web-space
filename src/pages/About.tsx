@@ -1,6 +1,6 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Award, Users, Target, Zap, Calendar, MapPin, Phone, Mail } from 'lucide-react';
+import { Award, Users, Target, Zap, MapPin, Phone, Mail } from 'lucide-react';
 
 const About = () => {
   const values = [
@@ -261,7 +261,7 @@ const About = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <h2 className="text-3xl font-bold mb-8">Свяжитесь с нами</h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
             <div className="flex flex-col items-center">
               <MapPin className="w-8 h-8 mb-3" />
               <h3 className="font-semibold mb-2">Адрес</h3>
@@ -276,11 +276,6 @@ const About = () => {
               <Mail className="w-8 h-8 mb-3" />
               <h3 className="font-semibold mb-2">Email</h3>
               <p className="text-white/90 text-sm">info@ecostroy.ru</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <Calendar className="w-8 h-8 mb-3" />
-              <h3 className="font-semibold mb-2">Режим работы</h3>
-              <p className="text-white/90 text-sm">Пн-Пт: 9:00-18:00</p>
             </div>
           </div>
           

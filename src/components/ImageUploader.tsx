@@ -9,7 +9,7 @@ export const ImageUploader = ({ onUpload }: { onUpload: (url: string) => void })
       const reader = new FileReader();
       reader.onload = () => {
         setPreview(reader.result as string);
-        onUpload(reader.result as string); // В реальном проекте - загрузка на сервер
+        onUpload(reader.result as string);
       };
       reader.readAsDataURL(file);
     }

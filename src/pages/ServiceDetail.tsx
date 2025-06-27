@@ -1,7 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { ArrowLeft, Check, Star, Phone, Mail } from 'lucide-react';
+import { ArrowLeft, Check, Phone, Mail } from 'lucide-react';
 
 const ServiceDetail = () => {
   const { id } = useParams();
