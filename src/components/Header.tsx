@@ -35,7 +35,7 @@ const Header = () => {
             </Link>
           </div>
 
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden lg:flex md:space-x-4 lg:space-x-8 text-sm md:text-base">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -51,13 +51,13 @@ const Header = () => {
             ))}
           </nav>
 
-          <div className="hidden md:flex">
-            <button className="bg-gradient-to-r from-eco-green to-eco-blue text-white px-6 py-2 rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-200">
+          <div className="hidden lg:flex">
+            <button className="bg-gradient-to-r from-eco-green to-eco-blue text-white px-4 md:px-5 lg:px-6 py-1.5 md:py-2 rounded-full text-sm md:text-base">
               Связаться с нами
             </button>
           </div>
 
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-600 hover:text-eco-blue"
@@ -68,7 +68,7 @@ const Header = () => {
         </div>
 
         {isMenuOpen && (
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
               {navigation.map((item) => (
                 <Link
