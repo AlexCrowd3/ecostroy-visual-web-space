@@ -35,7 +35,7 @@ const Hero = () => {
               alt="Современное строительство" 
               className="rounded-2xl shadow-2xl"
             />
-            <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg border">
+            <div className="absolute -bottom-10 left-0 sm:left-0 md:left-0 lg:-left-6 bg-white p-4 sm:p-5 md:p-6 rounded-xl shadow-lg border">
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center">
                   <span className="text-white font-bold">15+</span>
@@ -50,7 +50,7 @@ const Hero = () => {
         </div>
 
         <div className="mt-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
             <Link 
               to="/news"
               className="group relative overflow-hidden rounded-2xl h-48 bg-gradient-to-br from-blue-500 to-blue-700 hover:shadow-2xl transform hover:scale-105 transition-all duration-300"

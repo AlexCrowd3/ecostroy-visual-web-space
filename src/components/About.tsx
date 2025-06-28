@@ -65,7 +65,7 @@ const About = () => {
               className="rounded-2xl shadow-2xl"
             />
             
-            <div className="absolute -bottom-8 -left-8 bg-white p-6 rounded-xl shadow-lg border max-w-sm">
+            <div className="absolute -bottom-10 left-0 sm:left-0 md:left-0 lg:-left-5 bg-white p-4 sm:p-5 md:p-6 rounded-xl shadow-lg border">
               <h3 className="font-bold text-gray-900 mb-4">Наши преимущества:</h3>
               <ul className="space-y-2">
                 {advantages.slice(0, 3).map((advantage, index) => (
